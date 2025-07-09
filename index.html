@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Number Guess</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><span class="neon">Random Number Guess</span></h1>
+        </header>
+        <button id="htp" class="neon-btn">How to play?</button>
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>How to Play</h2>
+                <ul>
+                    <li>Guess the secret number between 0 and 100.</li>
+                    <li>You have 7 chances.</li>
+                    <li>Hints will tell you if your guess is too high or too low.</li>
+                    <li>Try to guess before you run out of chances!</li>
+                </ul>
+            </div>
+        </div>
+        <main>
+            <div class="game-card glass">
+                <div class="progress-bar-bg">
+                    <div id="progress-bar"></div>
+                </div>
+                <div class="input-group">
+                    <label for="Input">Enter your guess:</label>
+                    <input type="number" id="Input" placeholder="0-100" min="0" max="100">
+                    <button type="submit" id="mySbmt" class="neon-btn">Submit</button>
+                </div>
+                <div class="output-group">
+                    <p id="result"></p>
+                    <p id="gLeft"></p>
+                    <p id="fres"></p>
+                </div>
+                <div id="Rnum" class="reveal">
+                    <p id="ans">?</p>
+                </div>
+                <button id="restart" class="neon-btn" style="display:none;">Restart</button>
+            </div>
+        </main>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
